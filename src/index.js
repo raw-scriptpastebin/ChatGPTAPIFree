@@ -5,7 +5,7 @@ import express from 'express';
 import fetch from 'node-fetch';
 
 const port = parseInt(process.env.PORT || '8080', 10);
-const api_keys = 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;
+const api_keys = "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";
 const upstreamUrl = 'https://api.openai.com/v1/chat/completions';
 
 const corsHeaders = {
