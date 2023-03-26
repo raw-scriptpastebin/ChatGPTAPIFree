@@ -89,10 +89,12 @@ const handlePost = async (req, res) => {
   }
 };
 
+
 app.options('/v1/', handleOptions);
 app.post('/v1/', handlePost);
 app.options('/v1/chat/completions', handleOptions);
 app.post('/v1/chat/completions', handlePost);
+app.get('/', (req, res) => res.send('YAHALLO!!'));
 
 app.use('*', (req, res) => {
   res.status(404).set(corsHeaders).type('text/plain').send('Not found');
