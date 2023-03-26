@@ -5,7 +5,7 @@ import express from 'express';
 import fetch from 'node-fetch';
 
 const port = parseInt(process.env.PORT || '8080', 10);
-const api_keys = JSON.parse(process.env.API_KEYS);
+const api_keys = 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;
 const upstreamUrl = 'https://api.openai.com/v1/chat/completions';
 
 const corsHeaders = {
@@ -47,7 +47,7 @@ const handlePost = async (req, res) => {
 
   try {
     const authHeader = req.get('Authorization');
-    const authHeaderUpstream = authHeader || `Bearer ${randomChoice(api_keys)}`;
+    const authHeaderUpstream = authHeader || `Bearer ${api_keys}`;
 
     const requestHeader = {
       'Content-Type': 'application/json',
